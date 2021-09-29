@@ -3,14 +3,22 @@ import Layout from '../components/layout';
 import useInicio from '../hooks/use-inicio';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
+// import BackgroundImage from 'gatsby-background-image';
+
+// const ImagenBackground = styled(BackgroundImage)`
+//     height: 600px;
+// `;
 
 const Index = () => {
 
     const inicio = useInicio();
     const { nombre, contenido, imagen } = inicio[0];
 
+    console.log(imagen); 
+
     return (
         <Layout>
+            <div>{imagen}</div>
             <main>
                 <div
                     css={css`
